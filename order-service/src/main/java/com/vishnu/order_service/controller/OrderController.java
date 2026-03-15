@@ -35,7 +35,7 @@ public class OrderController {
     }
 
     @PutMapping("/admin/cancel/{id}")
-    public Order cancel(@PathVariable Long id) {
+    public Order cancel(@PathVariable("id") Long id) {
         return orderService.cancelOrder(id);
     }
 }
